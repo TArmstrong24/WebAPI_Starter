@@ -18,7 +18,8 @@ Here are some highlights of this project:
 Clone this project to your working folder:
 
 ```
-git clone https://github.com/tarmstrong24/WebAPI-.NetCore-Starter-Using-Repository-Pattern
+git clone --depth=1 https://github.com/tarmstrong24/WebAPI_Starter/
+cd WebAPI_Starter\src\WebAPIStarterRepo
 ```
 
 Restore requirements:
@@ -27,16 +28,19 @@ Restore requirements:
 dotnet Restore
 ```
 
-To get started, you will need to clone the repo:
-...
-
 Add required tables/sp to a db:
-...
 
-Update connection string:
-...
+```
+CREATE TABLE [dbo].[Samples](
+	[SampleId] [int] IDENTITY(1,1) NOT NULL,
+	[SampleData] [nvarchar](50) NULL
+) ON [PRIMARY]
+```
+
+Update connection string in app.config
+
 
 Configure NLog:
-...
+To utilize, update nlog.config with connection string and uncomment lines in startup.cs
 
 
