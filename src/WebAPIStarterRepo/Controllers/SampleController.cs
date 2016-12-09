@@ -41,7 +41,7 @@ namespace StarterAPI.Controllers
 
         // GET api/Sample/{id}
         [HttpGet("{id}")]
-        public IActionResult GetById(string id)
+        public IActionResult GetById(int id)
         {
             Sample result = _service.GetByID(id);
 
@@ -94,7 +94,7 @@ namespace StarterAPI.Controllers
         }
 
         [HttpPatch("{id}")]
-        public IActionResult Patch(string id, [FromBody]JsonPatchDocument<Sample> patch)
+        public IActionResult Patch(int id, [FromBody]JsonPatchDocument<Sample> patch)
         {
             var sample = _service.GetByID(id);
 
@@ -136,7 +136,7 @@ namespace StarterAPI.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+        public IActionResult Delete(int id)
         {
             if (_service.DeleteByID(id))
             {
