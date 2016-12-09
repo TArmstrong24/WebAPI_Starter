@@ -12,8 +12,8 @@ namespace StarterAPI.Services
         bool Update(T item);
         bool Delete(T item);
 
-        T GetByID(string id);
-        bool DeleteByID(string id);
+        T GetByID(int id);
+        bool DeleteByID(int id);
         
         IQueryable<T> GetAll();
         IQueryable<T> GetAll(Expression<Func<T, bool>> orderBy);

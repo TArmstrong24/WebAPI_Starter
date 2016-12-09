@@ -43,11 +43,11 @@ namespace StarterAPI.Repository
             return true;
         }
 
-        public T GetByID(string id)
+        public T GetByID(int id)
         {
             return _entitySet.Find(id);
         }
-        public bool DeleteByID(string id)
+        public bool DeleteByID(int id)
         {
             var item = _entitySet.Find(id);
             _entitySet.Remove(item);

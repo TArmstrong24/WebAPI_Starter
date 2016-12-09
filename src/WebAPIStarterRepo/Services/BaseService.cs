@@ -27,11 +27,11 @@ namespace StarterAPI.Services
         {
             return _repository.Delete(item);
         }
-        public T GetByID(string id)
+        public T GetByID(int id)
         {
             return _repository.GetByID(id);
         }
-        public bool DeleteByID(string id)
+        public bool DeleteByID(int id)
         {
             return _repository.DeleteByID(id);
         }
